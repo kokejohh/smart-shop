@@ -1,10 +1,13 @@
-import { pgTable, serial, integer, text, timestamp } from 'drizzle-orm/pg-core';
+import { pgTable, serial, integer, text, timestamp, pgEnum} from 'drizzle-orm/pg-core';
+
+export const roleEnum = pgEnum('role', ['admin', 'user', 'moderator']);
 
 export const user = pgTable('user', {
 	id: text('id').primaryKey(),
 	age: integer('age'),
 	username: text('username').notNull().unique(),
-	passwordHash: text('password_hash').notNull()
+	passwordHash: text('password_hash').notNull(),
+	role: roleEnum('role').default('user').notNull(),
 });
 
 export const session = pgTable('session', {
