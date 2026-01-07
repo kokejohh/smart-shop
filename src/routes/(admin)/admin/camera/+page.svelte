@@ -48,7 +48,7 @@
 				<span class="ml-2 text-white">Loading...</span>
 			</div>
 			<div class="relative z-10 h-full w-full">
-				<img src="http://127.0.0.1:8000/" style="width: 100%; border-radius: 10px;">
+				<img src="http://192.168.1.33:8000/" style="width: 100%; border-radius: 10px;">
 				<img src="http://127.0.0.1:8000/1" style="width: 100%; border-radius: 10px;">
 			<!-- {#key currentCam}
 				<Camera src={currentCam} />
